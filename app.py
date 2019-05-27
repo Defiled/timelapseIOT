@@ -18,7 +18,7 @@ def take_picture():
      print("Firing up camera...")
 
      timestamp = time.ctime()
-     cmd = "raspstill -o home/pi/weedlings/static/captures/" + timestamp + ".jpeg"
+     cmd = "raspistill -o /home/pi/timelapseIOT/static/captures/" + timestamp + ".jpeg"
      subprocess.call(cmd, shell=True)
 
      print("Snapped: " + timestamp)
