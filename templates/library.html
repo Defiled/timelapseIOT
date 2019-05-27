@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block content %}
+    {% for img in img_list: %}
+        <a href="./download/{{ img }}" download>
+            <img src="static/captures/{{ img }}">
+        </a>
+    {% endfor %}
+        <a href="./download/all" download>Download All</a>
+{% endblock %}
