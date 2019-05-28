@@ -17,12 +17,11 @@ executor = ThreadPoolExecutor()
 def take_picture():
      print("Firing up camera...")
 
-     # timestamp = time.ctime()
-     timestamp = time.time()
-     cmd = "raspistill -o /home/pi/timelapseIOT/static/captures/" + timestamp + ".jpeg"
+     timestamp = time.ctime()
+     cmd = "raspistill -o \"/home/pi/timelapseIOT/static/captures/" + str(timestamp) + ".jpeg\""
      subprocess.call(cmd, shell=True)
 
-     print("Snapped: " + timestamp)
+     print("Snapped: " + str(timestamp)
      return
 
 def start_interval():
