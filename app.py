@@ -17,7 +17,8 @@ executor = ThreadPoolExecutor()
 def take_picture():
      print("Firing up camera...")
 
-     timestamp = time.ctime()
+     # timestamp = time.ctime()
+     timestamp = time.time()
      cmd = "raspistill -o /home/pi/timelapseIOT/static/captures/" + timestamp + ".jpeg"
      subprocess.call(cmd, shell=True)
 
