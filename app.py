@@ -21,7 +21,7 @@ def take_picture():
      cmd = "raspistill -o \"/home/pi/timelapseIOT/static/captures/" + str(timestamp) + ".jpeg\""
      subprocess.call(cmd, shell=True)
 
-     print("Snapped: " + str(timestamp)
+     print("Snapped: " + str(timestamp))
      return
 
 def start_interval():
